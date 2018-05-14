@@ -6,12 +6,11 @@
 /*   By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/14 20:04:07 by rnugroho          #+#    #+#             */
-/*   Updated: 2018/05/14 21:20:46 by rnugroho         ###   ########.fr       */
+/*   Updated: 2018/05/14 21:23:33 by rnugroho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Color.hpp"
-#include <cstdio>
+#include "ft_mod1.hpp"
 
 int
 	main(int argc, char **argv)

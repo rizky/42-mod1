@@ -6,12 +6,13 @@
 /*   By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/14 21:18:06 by rnugroho          #+#    #+#             */
-/*   Updated: 2018/05/14 21:19:22 by rnugroho         ###   ########.fr       */
+/*   Updated: 2018/05/14 21:23:44 by rnugroho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_MOD1_H
 # define FT_MOD1_H
 # include "libft.h"
+# include "Color.hpp"
 
 #endif
