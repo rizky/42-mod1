@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mod1.cpp                                        :+:      :+:    :+:   */
+/*   Color.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/14 20:04:07 by rnugroho          #+#    #+#             */
-/*   Updated: 2018/05/14 21:05:16 by rnugroho         ###   ########.fr       */
+/*   Created: 2018/05/14 20:26:56 by rnugroho          #+#    #+#             */
+/*   Updated: 2018/05/14 21:04:31 by rnugroho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Color.hpp"
-#include <cstdio>
 
-int
-	main(int argc, char **argv)
+Color::Color(int red, int green, int blue)
 {
-	(void)argc;
-	(void)argv;
-	Color *color = new Color(255 << 8);
-	color->toString();
-	return (0);
+	this->red = red;
+	this->green = green;
+	this->blue = blue;
 }
-	
+
+Color::Color(int rgb)
+{
+	this->red = (rgb >> 16) % 256;
+	this->green = (rgb >> 8) % 256;
+	this->blue = rgb % 256;
+}
+
+void
+	Color::toString(void)
+{
+	std::printf("Color( red: %3d, green: %3d, blue: %3d )", this->red, this->green, this->blue);
+}

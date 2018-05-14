@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mod1.cpp                                        :+:      :+:    :+:   */
+/*   Color.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/14 20:04:07 by rnugroho          #+#    #+#             */
-/*   Updated: 2018/05/14 21:05:16 by rnugroho         ###   ########.fr       */
+/*   Created: 2018/05/14 20:26:51 by rnugroho          #+#    #+#             */
+/*   Updated: 2018/05/14 21:05:52 by rnugroho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Color.hpp"
-#include <cstdio>
+#ifndef COLOR_H
+# define COLOR_H
+# include <cstdio>
 
-int
-	main(int argc, char **argv)
+class Color
 {
-	(void)argc;
-	(void)argv;
-	Color *color = new Color(255 << 8);
-	color->toString();
-	return (0);
-}
-	
+	public:
+		Color(int red, int green, int blue);
+		Color(int rgb);
+		~Color(void);
+
+		void Add(Color color);
+		void Sub(Color color);
+		void Mult(Color color);
+
+		void toString();
+
+		int red;
+		int green;
+		int blue;
+};
+
+#endif

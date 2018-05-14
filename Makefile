@@ -6,12 +6,13 @@
 #    By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/01 20:07:00 by rnugroho          #+#    #+#              #
-#    Updated: 2018/05/14 20:13:09 by rnugroho         ###   ########.fr        #
+#    Updated: 2018/05/14 20:42:20 by rnugroho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME:= mod1
-FILES:= ft_mod1
+FILES:= ft_mod1 \
+		Color
 
 # ------------------
 COMPILER:=g++
@@ -19,7 +20,8 @@ SRCPATH:=src/
 HDRPATH:=include/
 CCHPATH:=obj/
 IFLAGS:=-I $(HDRPATH)
-CFLAGS:= -std=c++11 -Wall -Wextra 
+LFLAGS:= 
+CFLAGS:= -std=c++11 -Wall -Wextra $(IFLAGS)
 # ==================
 
 # ----- Colors -----
@@ -47,7 +49,7 @@ $(NAME): $(OBJ)
 
 $(CCHPATH)%.o: $(SRCPATH)%.cpp | $(CCHF)
 	@echo $(PURPLE) " - Compiling $< into $@" $(EOC)
-	@$(COMPILER) $(CFLAGS) -cpp $< -o $@
+	@$(COMPILER) $(CFLAGS) -c $< -o $@
 
 %.c:
 	@echo $(RED)"Missing file : $@" $(EOC)

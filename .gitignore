@@ -33,3 +33,4 @@
 .cache_exists
 mod1
 *.DS_Store
+*.dSYM*
