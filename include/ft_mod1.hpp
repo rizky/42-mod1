@@ -1,25 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mod1.cpp                                        :+:      :+:    :+:   */
+/*   ft_mod1.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/14 20:04:07 by rnugroho          #+#    #+#             */
-/*   Updated: 2018/05/14 21:20:46 by rnugroho         ###   ########.fr       */
+/*   Created: 2018/05/14 21:18:06 by rnugroho          #+#    #+#             */
+/*   Updated: 2018/05/14 21:19:22 by rnugroho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Color.hpp"
-#include <cstdio>
+#ifndef FT_MOD1_H
+# define FT_MOD1_H
+# include "libft.h"
 
-int
-	main(int argc, char **argv)
-{
-	(void)argc;
-	(void)argv;
-	Color *color = new Color(255 << 8);
-	ft_printf("%s", color->toString());
-	return (0);
-}
-	
+#endif

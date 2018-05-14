@@ -6,7 +6,7 @@
 /*   By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/14 20:26:56 by rnugroho          #+#    #+#             */
-/*   Updated: 2018/05/14 21:04:31 by rnugroho         ###   ########.fr       */
+/*   Updated: 2018/05/14 21:21:01 by rnugroho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ Color::Color(int rgb)
 	this->blue = rgb % 256;
 }
 
-void
-	Color::toString(void)
+char
+	*Color::toString(void)
 {
-	std::printf("Color( red: %3d, green: %3d, blue: %3d )", this->red, this->green, this->blue);
+	int	ret;
+	return (ft_rasprintf(&ret, "Color( red: %3d, green: %3d, blue: %3d )", this->red, this->green, this->blue));
 }

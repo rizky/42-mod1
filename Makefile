@@ -6,7 +6,7 @@
 #    By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/01 20:07:00 by rnugroho          #+#    #+#              #
-#    Updated: 2018/05/14 20:42:20 by rnugroho         ###   ########.fr        #
+#    Updated: 2018/05/14 21:09:18 by rnugroho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,13 +14,19 @@ NAME:= mod1
 FILES:= ft_mod1 \
 		Color
 
+# ----- Libft ------
+LFTDIR:=./libft
+LFTFLAG:=-L $(LFTDIR) -l ft
+LFTINC:=-I $(LFTDIR)/include
+# ==================
+
 # ------------------
 COMPILER:=g++
 SRCPATH:=src/
 HDRPATH:=include/
 CCHPATH:=obj/
-IFLAGS:=-I $(HDRPATH)
-LFLAGS:= 
+IFLAGS:=-I $(HDRPATH) $(LFTINC)
+LFLAGS:= $(LFTFLAG)
 CFLAGS:= -std=c++11 -Wall -Wextra $(IFLAGS)
 # ==================
 
@@ -43,6 +49,7 @@ CCHF:=.cache_exists
 all: $(NAME)
 
 $(NAME): $(OBJ)
+	@cd $(LFTDIR) && $(MAKE)
 	@echo $(CYAN) " - Compiling $@" $(RED)
 	@$(COMPILER) $(CFLAGS) $(SRC) $(LFLAGS) -o $(NAME)
 	@echo $(GREEN) " - OK" $(EOC)
