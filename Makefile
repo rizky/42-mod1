@@ -6,7 +6,7 @@
 #    By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/01 20:07:00 by rnugroho          #+#    #+#              #
-#    Updated: 2018/05/14 21:09:18 by rnugroho         ###   ########.fr        #
+#    Updated: 2018/05/14 21:59:00 by rnugroho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,8 +26,8 @@ SRCPATH:=src/
 HDRPATH:=include/
 CCHPATH:=obj/
 IFLAGS:=-I $(HDRPATH) $(LFTINC)
-LFLAGS:= $(LFTFLAG)
-CFLAGS:= -std=c++11 -Wall -Wextra $(IFLAGS)
+LFLAGS:= $(LFTFLAG) `pkg-config --static --libs glfw3 glew`
+CFLAGS:= -std=c++11 -Wall -Wextra $(IFLAGS) `pkg-config --cflags glfw3 glew`
 # ==================
 
 # ----- Colors -----

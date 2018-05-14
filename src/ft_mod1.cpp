@@ -6,11 +6,12 @@
 /*   By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/14 20:04:07 by rnugroho          #+#    #+#             */
-/*   Updated: 2018/05/14 21:38:16 by rnugroho         ###   ########.fr       */
+/*   Updated: 2018/05/14 22:00:02 by rnugroho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_mod1.hpp"
+#include "GL/glew.h"
 
 int
 	main(int argc, char **argv)
