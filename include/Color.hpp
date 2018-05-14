@@ -6,7 +6,7 @@
 /*   By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/14 20:26:51 by rnugroho          #+#    #+#             */
-/*   Updated: 2018/05/14 21:24:24 by rnugroho         ###   ########.fr       */
+/*   Updated: 2018/05/14 21:37:49 by rnugroho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ class Color
 		int red;
 		int green;
 		int blue;
+	private:
+		char *_toString;
 };
 
 #endif

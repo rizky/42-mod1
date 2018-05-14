@@ -6,7 +6,7 @@
 /*   By: rnugroho <rnugroho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/14 20:04:07 by rnugroho          #+#    #+#             */
-/*   Updated: 2018/05/14 21:23:33 by rnugroho         ###   ########.fr       */
+/*   Updated: 2018/05/14 21:38:16 by rnugroho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int
 	(void)argv;
 	Color *color = new Color(255 << 8);
 	ft_printf("%s", color->toString());
+	delete color;
 	return (0);
 }
 	
